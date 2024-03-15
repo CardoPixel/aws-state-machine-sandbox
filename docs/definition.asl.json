@@ -1,0 +1,195 @@
+{
+  "StartAt": "Validate Order Task",
+  "States": {
+    "Validate Order Task": {
+      "Next": "Validate Order",
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ClientExecutionTimeoutException",
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 6,
+          "BackoffRate": 2
+        }
+      ],
+      "Type": "Task",
+      "InputPath": "$",
+      "ResultPath": "$.validationResult",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:us-east-1:846087414049:function:AwsStateMachineSandboxSta-ValidateOrderFunction9AD-iicWBkf4xHKQ",
+        "Payload.$": "$"
+      }
+    },
+    "Validate Order": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.validationResult.Payload.validationStatus",
+          "StringEquals": "FAILED",
+          "Next": "Validation Failed"
+        }
+      ],
+      "Default": "Process Order Task"
+    },
+    "Process Order Task": {
+      "Next": "Payment Task",
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ClientExecutionTimeoutException",
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 6,
+          "BackoffRate": 2
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "Next": "Cancel Order Task"
+        }
+      ],
+      "Type": "Task",
+      "ResultPath": "$.processOrderResult",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:us-east-1:846087414049:function:AwsStateMachineSandboxSta-ProcessOrderFunction50B9-YxvnD93jN3gG",
+        "Payload.$": "$"
+      }
+    },
+    "Payment Task": {
+      "Next": "Verify Order Payment Task",
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ClientExecutionTimeoutException",
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 6,
+          "BackoffRate": 2
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "Next": "Cancel Order Task"
+        }
+      ],
+      "Type": "Task",
+      "InputPath": "$.processOrderResult.Payload",
+      "ResultPath": "$.paymentResult",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:us-east-1:846087414049:function:AwsStateMachineSandboxStac-PaymentFunctionCCA5A1C6-WpvU7bvv1OLq",
+        "Payload.$": "$"
+      }
+    },
+    "Verify Order Payment Task": {
+      "Next": "Check Payment Outcome",
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ClientExecutionTimeoutException",
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 6,
+          "BackoffRate": 2
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "Next": "Cancel Order Task"
+        }
+      ],
+      "Type": "Task",
+      "InputPath": "$.paymentResult.Payload",
+      "ResultPath": "$.verificationResult",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:us-east-1:846087414049:function:AwsStateMachineSandboxSta-VerifyOrderPaymentFuncti-ejNbrlilNIFV",
+        "Payload.$": "$"
+      }
+    },
+    "Check Payment Outcome": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.verificationResult.Payload.status",
+          "StringEquals": "OVERPAID",
+          "Next": "Refund Payment Task"
+        }
+      ],
+      "Default": "Payment Success"
+    },
+    "Payment Success": {
+      "Type": "Succeed"
+    },
+    "Refund Payment Task": {
+      "End": true,
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ClientExecutionTimeoutException",
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 6,
+          "BackoffRate": 2
+        }
+      ],
+      "Type": "Task",
+      "InputPath": "$.verificationResult.Payload",
+      "ResultPath": "$.refundResult",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:us-east-1:846087414049:function:AwsStateMachineSandboxSta-RefundPaymentFunction8E0-3DPIh6zFhTqM",
+        "Payload.$": "$"
+      }
+    },
+    "Cancel Order Task": {
+      "End": true,
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ClientExecutionTimeoutException",
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 6,
+          "BackoffRate": 2
+        }
+      ],
+      "Type": "Task",
+      "ResultPath": "$.cancelOrderResult",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:us-east-1:846087414049:function:AwsStateMachineSandboxSta-CancelOrderFunction89F8C-1Gkhr4mDf6kW",
+        "Payload.$": "$"
+      }
+    },
+    "Validation Failed": {
+      "Type": "Fail",
+      "Error": "Order details did not pass validation",
+      "Cause": "Validation failed"
+    }
+  }
+}

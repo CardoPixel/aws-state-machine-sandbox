@@ -1,0 +1,3 @@
+{
+    "body": "{\"orderId\":\"ORD1234567\",\"customer\":{\"customerId\":\"CUST12345\",\"name\":\"Jane Doe\",\"email\":\"janedoe@example.com\",\"taxId\":\"TAX12345\"},\"items\":[{\"itemId\":\"ITEM12345\",\"productName\":\"Smartphone\",\"quantity\":1,\"price\":599.99},{\"itemId\":\"ITEM67890\",\"productName\":\"Protective Case\",\"quantity\":1,\"price\":49.99}],\"payment\":{\"paymentId\":\"PAYMENT12345\",\"method\":\"CreditCard\",\"amount\":650}}"
+}

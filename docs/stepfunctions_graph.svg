@@ -1,0 +1,101 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "https://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="Graph view" width="737" height="577"><g transform="translate(11.999996185302734,18.875)"><g class="nodes"><g class="node-container" transform="translate(401.0416679382324,19)"><g class="node anchor"><circle class="shape" x="-15.875" y="-9" r="25.875"/><text class="label"><tspan xml:space="preserve" text-anchor="middle" alignment-baseline="central">Start</tspan></text></g></g><g class="node-container" transform="translate(344.7624988555908,523)"><g class="node anchor"><circle class="shape" x="-12.175000190734863" y="-9" r="22.175000190734863"/><text class="label"><tspan xml:space="preserve" text-anchor="middle" alignment-baseline="central">End</tspan></text></g></g><g class="node-container" transform="translate(401.0416679382324,82)"><g class="node state Task" aria-label="State Validate Order Task" data-virtual-tab-id="11" tabindex="0" transform="translate(-8)"><rect class="shape step-status" rx="5" ry="5" x="-72.06666564941406" y="-19" width="160.13333129882812" height="38"/><text class="label" xml:space="preserve" text-anchor="middle" alignment-baseline="central">Validate Order Task</text><svg class="icon" width="16" height="16" x="67.06666564941406" y="-8"/></g></g><g class="node-container" transform="translate(401.0416679382324,145)"><g class="node state Choice" aria-label="State Validate Order" data-virtual-tab-id="12" tabindex="-1" transform="translate(-8)"><rect class="shape step-status" rx="5" ry="5" x="-56.16666793823242" y="-19" width="128.33333587646484" height="38"/><text class="label" xml:space="preserve" text-anchor="middle" alignment-baseline="central">Validate Order</text><svg class="icon" width="16" height="16" x="51.16666793823242" y="-8"/></g></g><g class="node-container" transform="translate(70.79166793823242,460)"><g class="node state Fail" aria-label="State Validation Failed" data-virtual-tab-id="13" tabindex="-1" transform="translate(-8)"><rect class="shape step-status" rx="5" ry="5" x="-62.79166793823242" y="-19" width="141.58333587646484" height="38"/><text class="label" xml:space="preserve" text-anchor="middle" alignment-baseline="central">Validation Failed</text><svg class="icon" width="16" height="16" x="57.79166793823242" y="-8"/></g></g><g class="node-container" transform="translate(499.7250003814697,208)"><g class="node state Task" aria-label="State Process Order Task" data-virtual-tab-id="14" tabindex="-1" transform="translate(-8)"><rect class="shape step-status" rx="5" ry="5" x="-69.83333206176758" y="-19" width="155.66666412353516" height="38"/><text class="label" xml:space="preserve" text-anchor="middle" alignment-baseline="central">Process Order Task</text><svg class="icon" width="16" height="16" x="64.83333206176758" y="-8"/></g></g><g class="node-container" transform="translate(451.25833320617676,271)"><g class="node state Task" aria-label="State Payment Task" data-virtual-tab-id="15" tabindex="-1" transform="translate(-8)"><rect class="shape step-status" rx="5" ry="5" x="-53.93333435058594" y="-19" width="123.86666870117188" height="38"/><text class="label" xml:space="preserve" text-anchor="middle" alignment-baseline="central">Payment Task</text><svg class="icon" width="16" height="16" x="48.93333435058594" y="-8"/></g></g><g class="node-container" transform="translate(637.3958339691162,397)"><g class="node state Task" aria-label="State Cancel Order Task" data-virtual-tab-id="16" tabindex="-1" transform="translate(-8)"><rect class="shape step-status" rx="5" ry="5" x="-67.03333282470703" y="-19" width="150.06666564941406" height="38"/><text class="label" xml:space="preserve" text-anchor="middle" alignment-baseline="central">Cancel Order Task</text><svg class="icon" width="16" height="16" x="62.03333282470703" y="-8"/></g></g><g class="node-container" transform="translate(359.7624988555908,334)"><g class="node state Task" aria-label="State Verify Order Payment Task" data-virtual-tab-id="17" tabindex="-1" transform="translate(-8)"><rect class="shape step-status" rx="5" ry="5" x="-94.74166870117188" y="-19" width="205.48333740234375" height="38"/><text class="label" xml:space="preserve" text-anchor="middle" alignment-baseline="central">Verify Order Payment Task</text><svg class="icon" width="16" height="16" x="89.74166870117188" y="-8"/></g></g><g class="node-container" transform="translate(344.7624988555908,397)"><g class="node state Choice" aria-label="State Check Payment Outcome" data-virtual-tab-id="18" tabindex="-1" transform="translate(-8)"><rect class="shape step-status" rx="5" ry="5" x="-89.95833587646484" y="-19" width="195.9166717529297" height="38"/><text class="label" xml:space="preserve" text-anchor="middle" alignment-baseline="central">Check Payment Outcome</text><svg class="icon" width="16" height="16" x="84.95833587646484" y="-8"/></g></g><g class="node-container" transform="translate(268.15833282470703,460)"><g class="node state Task" aria-label="State Refund Payment Task" data-virtual-tab-id="19" tabindex="-1" transform="translate(-8)"><rect class="shape step-status" rx="5" ry="5" x="-78.57499694824219" y="-19" width="173.14999389648438" height="38"/><text class="label" xml:space="preserve" text-anchor="middle" alignment-baseline="central">Refund Payment Task</text><svg class="icon" width="16" height="16" x="73.57499694824219" y="-8"/></g></g><g class="node-container" transform="translate(466.6166648864746,460)"><g class="node state Succeed" aria-label="State Payment Success" data-virtual-tab-id="20" tabindex="-1" transform="translate(-8)"><rect class="shape step-status" rx="5" ry="5" x="-63.88333511352539" y="-19" width="143.76667022705078" height="38"/><text class="label" xml:space="preserve" text-anchor="middle" alignment-baseline="central">Payment Success</text><svg class="icon" width="16" height="16" x="58.88333511352539" y="-8"/></g></g></g><g class="edges"><g class="edge"><path class="path" style="fill: none;" marker-end="url(#arrowhead17)" d="M401.042,101L401.042,103.083C401.042,105.167,401.042,109.333,401.042,113.5C401.042,117.667,401.042,121.833,401.042,123.917L401.042,126"/><defs><marker id="arrowhead17" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs></g><g class="edge"><path class="path" style="fill: none;" marker-end="url(#arrowhead18)" d="M401.042,44.875L401.042,45.813C401.042,46.75,401.042,48.625,401.042,51.646C401.042,54.667,401.042,58.833,401.042,60.917L401.042,63"/><defs><marker id="arrowhead18" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs></g><g class="edge"><path class="path" style="fill: none;" marker-end="url(#arrowhead19)" d="M336.875,151.12L292.528,155.35C248.181,159.58,159.486,168.04,115.139,177.52C70.792,187,70.792,197.5,70.792,208C70.792,218.5,70.792,229,70.792,239.5C70.792,250,70.792,260.5,70.792,271C70.792,281.5,70.792,292,70.792,302.5C70.792,313,70.792,323.5,70.792,334C70.792,344.5,70.792,355,70.792,365.5C70.792,376,70.792,386.5,70.792,397C70.792,407.5,70.792,418,70.792,425.333C70.792,432.667,70.792,436.833,70.792,438.917L70.792,441"/><defs><marker id="arrowhead19" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs></g><g class="edge"><path class="path" style="fill: none;" marker-end="url(#arrowhead20)" d="M460.565,164L467.092,166.083C473.618,168.167,486.672,172.333,493.198,176.5C499.725,180.667,499.725,184.833,499.725,186.917L499.725,189"/><defs><marker id="arrowhead20" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs></g><g class="edge"><path class="path" style="fill: none;" marker-end="url(#arrowhead21)" d="M470.491,227L467.286,229.083C464.08,231.167,457.669,235.333,454.464,239.5C451.258,243.667,451.258,247.833,451.258,249.917L451.258,252"/><defs><marker id="arrowhead21" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs></g><g class="edge"><path class="path" style="fill: none;" marker-end="url(#arrowhead22)" d="M577.558,222.622L592.531,225.435C607.504,228.248,637.45,233.874,652.423,241.937C667.396,250,667.396,260.5,667.396,271C667.396,281.5,667.396,292,667.396,302.5C667.396,313,667.396,323.5,667.396,334C667.396,344.5,667.396,355,665.412,362.333C663.428,369.667,659.459,373.833,657.475,375.917L655.491,378"/><defs><marker id="arrowhead22" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs></g><g class="edge"><path class="path" style="fill: none;" marker-end="url(#arrowhead23)" d="M396.07,290L390.019,292.083C383.968,294.167,371.865,298.333,365.814,302.5C359.762,306.667,359.762,310.833,359.762,312.917L359.762,315"/><defs><marker id="arrowhead23" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs></g><g class="edge"><path class="path" style="fill: none;" marker-end="url(#arrowhead24)" d="M513.192,283.778L528.315,286.899C543.438,290.019,573.683,296.259,588.806,304.63C603.929,313,603.929,323.5,603.929,334C603.929,344.5,603.929,355,606.143,362.333C608.356,369.667,612.783,373.833,614.996,375.917L617.21,378"/><defs><marker id="arrowhead24" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs></g><g class="edge"><path class="path" style="fill: none;" marker-end="url(#arrowhead25)" d="M350.715,353L349.723,355.083C348.731,357.167,346.747,361.333,345.755,365.5C344.762,369.667,344.762,373.833,344.762,375.917L344.762,378"/><defs><marker id="arrowhead25" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs></g><g class="edge"><path class="path" style="fill: none;" marker-end="url(#arrowhead26)" d="M456.449,353L467.05,355.083C477.652,357.167,498.855,361.333,517.217,365.5C535.579,369.667,551.1,373.833,558.86,375.917L566.621,378"/><defs><marker id="arrowhead26" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs></g><g class="edge"><path class="path" style="fill: none;" marker-end="url(#arrowhead27)" d="M298.557,416L293.49,418.083C288.424,420.167,278.291,424.333,273.225,428.5C268.158,432.667,268.158,436.833,268.158,438.917L268.158,441"/><defs><marker id="arrowhead27" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs></g><g class="edge"><path class="path" style="fill: none;" marker-end="url(#arrowhead28)" d="M418.262,416L426.321,418.083C434.38,420.167,450.498,424.333,458.558,428.5C466.617,432.667,466.617,436.833,466.617,438.917L466.617,441"/><defs><marker id="arrowhead28" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs></g><g class="edge"><path class="path" style="fill: none;" marker-end="url(#arrowhead29)" d="M466.617,479L466.617,481.083C466.617,483.167,466.617,487.333,449.886,493.742C433.155,500.15,399.693,508.8,382.963,513.125L366.232,517.45"/><defs><marker id="arrowhead29" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs></g><g class="edge"><path class="path" style="fill: none;" marker-end="url(#arrowhead30)" d="M268.158,479L268.158,481.083C268.158,483.167,268.158,487.333,277.508,493.261C286.857,499.189,305.555,506.878,314.904,510.722L324.254,514.567"/><defs><marker id="arrowhead30" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs></g><g class="edge"><path class="path" style="fill: none;" marker-end="url(#arrowhead31)" d="M637.396,416L637.396,418.083C637.396,420.167,637.396,424.333,637.396,431.667C637.396,439,637.396,449.5,637.396,460C637.396,470.5,637.396,481,592.298,491.104C547.201,501.209,457.005,510.918,411.908,515.772L366.81,520.627"/><defs><marker id="arrowhead31" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs></g><g class="edge"><path class="path" style="fill: none;" marker-end="url(#arrowhead32)" d="M70.792,479L70.792,481.083C70.792,483.167,70.792,487.333,112.782,494.245C154.772,501.156,238.752,510.811,280.742,515.639L322.733,520.467"/><defs><marker id="arrowhead32" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs></g></g></g><style xmlns="http://www.w3.org/1999/xhtml">
+  .link &gt; rect {
+    fill: #0073BB;
+  }
+
+  .link .label {
+    fill: #FFFFFF;
+  }
+
+  .node &gt; .shape {
+    stroke: #555555;
+    stroke-width: 0.6px;
+    fill: #FFFFFF;
+  }
+
+  path {
+    stroke: #555;
+    background-color: #555;
+    stroke-width: 1px;
+  }
+
+  .node.state.NotYetStarted &gt; .shape,
+  .node.state.Container &gt; .shape {
+    stroke-dasharray: 5 2;
+  }
+
+  .node.state.FailedState &gt; .shape,
+  rect.legend.FailedState {
+    fill: #DE322F;
+  }
+
+  .node.state.CaughtErrorState &gt; .shape,
+  rect.legend.CaughtErrorState {
+    fill: #FFA500;
+  }
+
+  .node.state.SucceededState &gt; .shape,
+  rect.legend.SucceededState {
+    fill: #2BD62E;
+  }
+
+  .node.state.InProgressState &gt; .shape,
+  rect.legend.InProgressState {
+    fill: #53c9ed;
+  }
+
+  .node.state.CancelledState &gt; .shape,
+  rect.legend.CancelledState {
+    fill: #dddddd;
+  }
+
+  .node.anchor &gt; .shape {
+    fill: #FFDA75;
+  }
+
+  .node.state.hovered:not(.selected):not(.NotYetStarted) &gt; .shape,
+  .node.selected &gt; .shape {
+    stroke: #555555;
+    stroke-width: 2px;
+  }
+
+  .node.state.Container.Failed &gt; .shape {
+    fill: #EE9592;
+  }
+
+  .node.state.Container.CaughtError &gt; .shape {
+    fill: #FFD27F;
+  }
+
+  .node.state.Container.Succeeded &gt; .shape {
+    fill: #91EA9A;
+  }
+
+  .node.state.Container.InProgress &gt; .shape {
+    fill :#A9E4F7;
+  }
+
+  .node.state.Container.Cancelled &gt; .shape {
+    fill: #EEEEEE;
+  }
+
+  marker {
+    fill: #555555;
+  }
+
+  .node.anchor,
+  .node.state.NotYetStarted {
+    cursor: default;
+  }
+
+  .node.state {
+    cursor: default;
+  }
+
+  tspan .label {
+    font-weight: normal;
+    font-size: 12px;
+    text-shadow: none;
+  }
+</style></svg>
